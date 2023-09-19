@@ -1,0 +1,60 @@
+/* Скидання стилів */
+@import url("reset.css");
+/* * {
+    color: red !important;
+} */
+/* p {
+    color: green;
+} */
+/* a {
+    color: black;
+} */
+
+/* Тег * не має пріорітет перед  селектором тегу, класу, атрибуту та id, лише для контенту який безпосередньо розміщений в цих селекторах */
+/* [class*="container"] {
+    color: rgb(248, 114, 250);
+} */
+.hero__title {
+    color: purple;
+}
+
+#not-cover-id {
+    color: sienna;
+}
+li.menu__item {
+    color: green;
+}
+.facts p {
+    color: rgb(146, 146, 12);
+}
+.facts p span {
+    color: red;
+}
+.perfumery__list.list-container {
+    color: rgb(46, 192, 119);
+}
+h2 {
+    color: darkblue;
+}
+/* .not-cover__text,
+.list-container__item {
+    color: lawngreen;
+} */
+.facts__list .facts__item {
+    color: tan;
+}
+.facts__list .facts__item span {
+    color: red;
+}
+/* .perfumery * {
+    color: rgb(0, 255, 51);
+} */
+.perfumery > p {
+    color: violet;
+}
+.not-cover__text ~ p {
+    color: red;
+}
+.hero__img + p {
+    color: khaki;
+}
