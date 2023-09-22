@@ -1,0 +1,276 @@
+@import url("reset.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,regular,600,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Pacifico:regular&display=swap");
+
+/* 100 - thin 
+300 - light 
+400 - Regular (normal) (за замовчуванням)
+500 - medium 
+600 - semibold 
+700 - bold 
+900 - black */
+
+/* FONT Nastup */
+@font-face {
+    font-family: "Nastup";
+    src: url("../fonts/nastup.woff2") format("woff2"),
+        url("../fonts/nastup.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* FONT Volja */
+@font-face {
+    font-family: "Volja";
+    src: url("../fonts/volja-regular.woff2") format("woff2"),
+        url("../fonts/volja-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* FONT Causten */
+@font-face {
+    font-family: "Causten";
+    src: url("../fonts/Causten-Regular.woff2") format("woff2"),
+        url("../fonts/Causten-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Causten";
+    src: url("../fonts/Causten-Medium.woff2") format("woff2"),
+        url("../fonts/Causten-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Causten";
+    src: url("../fonts/Causten-SemiBold.woff2") format("woff2"),
+        url("../fonts/Causten-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Causten";
+    src: url("../fonts/Causten-Bold.woff2") format("woff2"),
+        url("../fonts/Causten-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Kernel";
+    src: url("../fonts/Kernel-Regular.woff2") format("woff2"),
+        url("../fonts/Kernel-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Kernel";
+    src: url("../fonts/Kernel-Light.woff2") format("woff2"),
+        url("../fonts/Kernel-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Kernel";
+    src: url("../fonts/Kernel-SemiBold.woff2") format("woff2"),
+        url("../fonts/Kernel-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Kernel";
+    src: url("../fonts/Kernel-Bold.woff2") format("woff2"),
+        url("../fonts/Kernel-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+/* Font Kernel */
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #7d7d7d;
+}
+
+.hometask-1__title {
+    color: #37393f;
+    font-family: "Poppins";
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.27;
+}
+
+.hometask-1__subtitle {
+    color: #6b77e5;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.27;
+}
+
+.hometask-2__title {
+    color: #37393f;
+    font-family: "Poppins";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.27;
+}
+div.text p {
+    line-height: 1.46187;
+}
+.hometask-2__list {
+    font-weight: 500;
+    line-height: 1.46187;
+}
+div.link a {
+    font-family: "Nastup";
+    color: #f91c9d;
+}
+/* ===========training============== */
+div.family h2 {
+    font-family: "Pacifico", sans-serif, serif;
+    font-style: normal;
+}
+.family h3 {
+    font-family: "Nastup", sans-serif;
+    font-style: oblique;
+}
+.family h4 {
+    font-family: "Volja", serif;
+    font-style: oblique;
+}
+
+.font-weight {
+    font-family: "Causten", sans-serif;
+    color: rgb(0, 0, 0);
+}
+div.font-weight h2 {
+    font-family: "Pacifico", serif;
+}
+div.font-weight .text1 {
+    font-weight: 400;
+}
+div.font-weight .text2 {
+    font-weight: 500;
+}
+div.font-weight .text3 {
+    font-weight: 600;
+}
+div.font-weight .text4 {
+    font-weight: 700;
+}
+
+.text-align {
+    color: #3f12b2;
+}
+.text-align h2 {
+    font-family: "Pacifico", serif;
+}
+.text-align .text1 {
+    text-align: left;
+}
+.text-align .text2 {
+    text-align: center;
+}
+.text-align .text3 {
+    text-align: right;
+}
+.text-align .text4 {
+    text-align: justify;
+}
+
+.text-decortion {
+    color: rgb(0, 0, 0);
+}
+.text-decortion h2 {
+    font-family: "Pacifico", serif;
+}
+.text-decortion .text1 {
+    text-decoration: line-through;
+}
+.text-decortion .text2 {
+    text-decoration: underline;
+}
+.text-decortion .text3 {
+    text-decoration: overline;
+}
+
+.text-shadow {
+    color: #3f12b2;
+}
+.text-shadow h2 {
+    font-family: "Pacifico", serif;
+}
+.text-shadow .text1 {
+    text-shadow: 2px 2px 5px #2aea08;
+}
+.text-shadow .text2 {
+    text-shadow: -3px -3px 5px #ea5b08;
+}
+.text-shadow .text3 {
+    text-shadow: 5px 5px 5px #2aea08, -2px -2px 5px #e50c42, 1px 1px 5px #145de4;
+}
+
+.text-transform {
+    color: rgb(0, 0, 0);
+}
+.text-transform h2 {
+    font-family: "Pacifico", serif;
+}
+.text-transform .text1 {
+    text-transform: capitalize;
+}
+.text-transform .text2 {
+    text-transform: uppercase;
+}
+.text-transform .text3 {
+    text-transform: lowercase;
+}
+
+.line-height {
+    color: #3f12b2;
+    font-family: "Volja", serif;
+}
+.line-height h2 {
+    font-family: "Pacifico", serif;
+}
+.line-height .text1 {
+    line-height: 1.1;
+}
+.line-height .text2 {
+    line-height: 1.5;
+}
+.line-height .text3 {
+    line-height: 2;
+}
+.line-height .text4 {
+    line-height: 2.5;
+}
+
+.others {
+    color: rgb(0, 0, 0);
+}
+.others h2 {
+    font-family: "Pacifico", serif;
+}
+.others .text1 {
+    text-indent: 20px;
+}
+.others .text2 {
+    letter-spacing: 10px;
+}
+.others .text3 {
+    word-spacing: 30px;
+}
