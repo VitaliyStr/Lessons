@@ -1,0 +1,225 @@
+/* Скидання стилів */
+@import url("reset.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:regular&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:600&display=swap");
+
+body {
+    font-family: "inter", sans-serif;
+    font-size: 18px;
+    color: #7d7d7d;
+    line-height: 1.46;
+}
+.hometask-1 {
+    max-width: 692px;
+    margin-bottom: 50px;
+}
+.image {
+    margin-bottom: 24px;
+}
+.image__meeting {
+    max-width: 692px;
+}
+.description {
+    margin-bottom: 42px;
+}
+.description__title {
+    color: #37393f;
+    font-family: "Poppins";
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.27;
+    margin-bottom: 13px;
+}
+.collaboration p {
+    margin-bottom: 40px;
+}
+
+.collaboration__subtitle {
+    color: #6b77e5;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.27;
+    margin-bottom: 12px;
+}
+.collaboration__img {
+    max-width: 331px;
+    margin-right: 29px;
+}
+.benefits {
+    display: inline-block;
+    max-width: 326px;
+}
+.benefits__title {
+    color: #37393f;
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.27;
+    margin-bottom: 15px;
+}
+.benefits p {
+    color: #40ddb6;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.27;
+    margin-bottom: 23.5px;
+}
+.benefits__list li {
+    margin-bottom: 35px;
+}
+/* hometask 2 */
+.hometask-2 {
+    max-width: 1169px;
+    margin-bottom: 50px;
+}
+.what-we-do {
+    max-width: 563px;
+    padding: 21px 0px;
+    display: inline-block;
+}
+.what-we-do__title {
+    color: #d06b00;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 13px;
+}
+.what-we-do__sub-title {
+    color: #0e333d;
+    font-size: 59px;
+    margin-bottom: 25px;
+}
+.what-we-do p {
+    color: #474747;
+    font-size: 20px;
+    line-height: 1.8;
+}
+.person {
+    max-width: 273px;
+    margin-right: 22px;
+}
+.earing {
+    max-width: 273px;
+}
+/* hometask-3 */
+h3 {
+    max-width: 100px;
+    margin: 0 auto;
+    color: #e40ebd;
+    background-color: yellow;
+    margin-bottom: 20px;
+}
+.block {
+    max-width: 500px;
+    background-color: yellowgreen;
+    margin: 0px 0px 30px 0px;
+    color: #0e333d;
+}
+.block-padding1 {
+    padding: 50px 20px 20px 15px;
+}
+.block-padding {
+    padding: 20px;
+}
+
+.block2 {
+    max-width: 400px;
+    background-color: rgb(35, 159, 193);
+    margin: 0px 0px 30px 0px;
+    color: #0e333d;
+}
+.block-margin {
+    margin: 50px;
+}
+.block-margin1 {
+    margin: 0px 0px 0px 0px;
+}
+
+.margin-right div {
+    display: inline-block;
+    margin-right: 50px;
+    max-width: 200px;
+    padding-left: 20px;
+}
+.margin-minuse div {
+    max-width: 500px;
+    background-color: yellowgreen;
+}
+.margin-minuse img {
+    margin: -30px 0px -30px 0px;
+}
+.block3 {
+    background-color: red;
+    margin-bottom: 20px;
+}
+.width__1 {
+    width: 500px;
+}
+.width__2 {
+    max-width: 700px;
+}
+.width__3 {
+    min-width: 150px;
+}
+.width__4 {
+    width: 30%;
+}
+.block-4 {
+    background-color: #11dc8e;
+    margin-bottom: 20px;
+    width: 400px;
+    display: inline-block;
+}
+.height__1 {
+    height: 300px;
+}
+.height__2 {
+    min-height: 100px;
+}
+.height__3 {
+    max-height: 300px;
+}
+.overflow {
+    font-size: 0;
+}
+.block-5 {
+    display: inline-block;
+    max-width: 400px;
+    background-color: #e40ebd;
+    margin: 20px;
+    color: yellow;
+    max-height: 300px;
+    vertical-align: top;
+    font-size: 18px;
+}
+.overflow__1 {
+    overflow: auto;
+}
+.overflow__2 {
+    overflow: scroll;
+}
+.overflow__3 {
+    overflow: hidden;
+}
+.overflow__4 {
+    overflow: clip;
+}
+
+.dispaly__block span {
+    max-width: 300px;
+    display: block;
+}
+.display__inline p {
+    display: inline;
+    color: red;
+}
+.display__none {
+    display: none;
+}
+.display img {
+    display: block;
+}
