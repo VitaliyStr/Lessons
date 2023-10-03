@@ -1,0 +1,340 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* HEADER */
+body {
+    padding: 20px;
+}
+header {
+    margin-bottom: 50px;
+}
+.navigation {
+    color: #37393f;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 1220px;
+    margin: 0 auto;
+    border: 1px solid red;
+    padding: 15px;
+}
+.menu__list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Hometask-1 */
+
+.hometask-1 {
+    color: #7d7d7d;
+    font-size: 18px;
+}
+
+.hometask-1__container {
+    padding: 150.5px 20px;
+    max-width: 1218px;
+    margin: 0px auto;
+}
+.hometask-1-title {
+    max-width: 296px;
+    margin: 0px auto 70px;
+}
+
+.information__container {
+    max-width: 208px;
+    margin: 0px auto 16px;
+}
+.information__icon {
+    width: 12px;
+    height: 12px;
+    background-color: #40ddb6;
+    display: inline-block;
+    margin-right: 6px;
+}
+.information__text {
+    display: inline-block;
+    color: #37393f;
+    font-weight: 500;
+    max-width: 184px;
+}
+.hometask-1__title {
+    font-family: "Poppins, sans-serif";
+    color: #37393f;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.21;
+}
+.icons__title,
+.icons__subtitle,
+.photography__title,
+.photography__subtitle,
+.fonts__title {
+    color: #37393f;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+.icons {
+    margin-bottom: 100px;
+}
+.icons__title {
+    font-size: 40px;
+    line-height: 1.21;
+}
+.icons__text {
+    line-height: 1.46;
+    margin-bottom: 32px;
+}
+.icons__subtitle {
+    font-size: 30px;
+}
+.icons__span {
+    color: #40ddb6;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+.photography {
+    margin-bottom: 100px;
+}
+.photography__title {
+    font-size: 40px;
+    line-height: 1.21;
+}
+.photography__text {
+    line-height: 1.46;
+    margin-bottom: 24px;
+}
+.photography__subtitle {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+.photography__span {
+    color: #40ddb6;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+.pexels-text {
+    margin-bottom: 24px;
+}
+.pexels-text,
+.unsplash-text {
+    color: #40ddb6;
+    line-height: 1.46;
+}
+.fonts__title {
+    font-size: 40px;
+    line-height: 1.21;
+    margin-bottom: 11px;
+}
+.fonts__text {
+    line-height: 1.46;
+}
+.fonts__span {
+    color: #40ddb6;
+    font-weight: 500;
+    line-height: 1.46;
+}
+
+/* HOMETASK-2 */
+.hometask-2 {
+    padding: 150.5px 20px;
+}
+.hometask-2__container {
+    color: #7d7d7d;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.46;
+}
+.hometask-2__title {
+    color: #37393f;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.27;
+    margin-bottom: 13px;
+}
+.hometask-2__text {
+    margin-bottom: 35px;
+}
+.hometask-2__text > p {
+    margin-bottom: 30px;
+}
+.hometask-2__list {
+    margin-bottom: 35px;
+    margin-left: 16px;
+}
+/* HOMETASK-3 */
+.hometask-3 {
+    padding: 100px;
+}
+.hometask-3__container {
+    padding-left: 21px;
+    max-width: 1240px;
+    color: #807d7e;
+    font-family: "Causten", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.67;
+    letter-spacing: 0.4px;
+    margin: 0 auto;
+}
+.hometask-3__title {
+    color: #3c4242;
+
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.19;
+    letter-spacing: 0.56px;
+    margin-bottom: 30px;
+}
+.hometask-3__subtitle {
+    color: #807d7e;
+    font-family: "Core Sans C", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.67;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+}
+.hometask-3__text {
+    margin-bottom: 25px;
+}
+.hometask-3__text p {
+    margin-bottom: 20px;
+}
+.hometask-3__text span {
+    font-weight: 700;
+}
+.destination {
+    margin-bottom: 20px;
+}
+/* HOMETASK-4 */
+
+.hometask-4 {
+    padding: 160px 0px;
+}
+.hometask-4__container {
+    max-width: 1103px;
+    color: #606060;
+    font-family: "Cormorant Infant", serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 auto;
+    font-size: 0;
+}
+.what-we-do {
+    padding-top: 70px;
+    display: inline-block;
+    max-width: 503px;
+    margin-right: 75px;
+}
+.what-we-do__subtitle {
+    color: #d58417;
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 27px;
+}
+.what-we-do__title {
+    color: #000;
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 31px;
+}
+.what-we-do__text {
+    font-size: 30px;
+}
+.images {
+    display: inline-block;
+    vertical-align: top;
+}
+.image-1-block {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 30px;
+    border: 1px solid black;
+    width: 177px;
+    height: 336px;
+    border-radius: 235px;
+    padding: 15px 0px 0px 0px;
+}
+.image-1 {
+    margin: 0px 0px 0px -10px;
+}
+.image-2-block {
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid black;
+    width: 307px;
+    height: 500px;
+    border-radius: 235px;
+    padding: 15px 0px 0px 0px;
+}
+.image-2 {
+    margin: 0px 0px 0px -10px;
+}
+/* Practice */
+.hometask-5 {
+    padding: 100px;
+}
+.block-1 {
+    max-width: 400px;
+    border-top: 2px solid #f30707;
+    border-right: 10px dashed rgb(0, 242, 77);
+    border-bottom: 5px solid #000;
+    border-left: 15px dashed rgb(150, 143, 6);
+    outline: 5px solid rgb(65, 0, 243);
+    margin-bottom: 50px;
+    padding: 10px;
+}
+/*
+box-shadow
+Додає тінь до елементу
+Властивість не успадковується
+box-shadow: зсув_по_гориз зсув_по_верт радіус(розмиття) розмір колір
+inset - тінь в середені об'єкту
+*/
+.block-2 {
+    max-width: 400px;
+    margin-bottom: 50px;
+    padding: 10px;
+    box-shadow: 1px 5px 10px 5px hsl(91, 100%, 50%),
+        1px -5px 10px 5px hsl(218, 100%, 50%);
+    /* box-shadow: inset 0 0 15px 1px #000; */
+}
+.block-3 {
+    max-width: 400px;
+    margin-bottom: 50px;
+    padding: 10px;
+    box-shadow: inset 0 0 15px 1px #fa0303;
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen;
+    border-radius: 50%;
+}
+.block-5 {
+    max-width: 400px;
+    height: 400px;
+    margin-bottom: 50px;
+    padding: 10px;
+    background-color: rgb(55, 50, 205);
+    border-radius: 100% 0% 100% 0% / 62% 60% 40% 38%;
+}
+.block-4 {
+    max-width: 400px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 10px dashed greenyellow;
+    outline: 5px solid rgb(65, 0, 243);
+    background-color: #f9040492;
+    opacity: 0.5;
+}
