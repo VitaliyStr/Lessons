@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Lesson 12</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+
+		</header>
+		<main class="page">
+			<div class="car">
+				<div class="car__container">
+					<div class="car__body body-car">
+						<div class="body-car__left-side side-left">
+							<div class="side-left__top">
+								<div class="side-left__window"></div>
+							</div>
+							<div class="side-left__bottom ">
+								<div class="side-left__door"></div>
+								<div class="side-left__wheel"></div>
+								<div class=" side-left__headlight-1">
+								</div>
+							</div>
+						</div>
+						<div class="body-car__right-side side-right">
+							<div class="side-right__top ">
+								<div class="side-right__window"></div>
+							</div>
+							<div class="side-right__bottom">
+								<div class="side-right-door"></div>
+								<div class="side-right-wheel"></div>
+							</div>
+							<div class="side-right__headlight-1"></div>
+						</div>
+						<div class="body-car__dno"></div>
+					</div>
+				</div>
+
+			</div>
+			<div class="train-container">
+				<div class="translate block-train">
+					<div class="translate__item block-train__item">
+						transform: translate(20%, 20px)
+					</div>
+				</div>
+				<div class="scale block-train">
+					<div class="scale__item block-train__item "> transform: scale(0.5);</div>
+				</div>
+				<div class=" block-train">
+					<div class="rotate__item block-train__item "> transform: rotate(45deg);</div>
+				</div>
+				<div class=" block-train">
+					<div class="skew__item block-train__item "> transform: skew(-10deg);</div>
+				</div>
+				<div class=" block-train">
+					<div class="matrix__item block-train__item ">
+						transform: translate(0, 20%) scale(0.8) rotate(-30deg) skew(10deg);
+					</div>
+				</div>
+				<div class=" block-train">
+					<div class="transform-origin__item block-train__item ">
+						transform-origin: 0 100%;
+						transform: rotate(10deg);
+					</div>
+				</div>
+				<div class="perspective block-train">
+					<div class="perspective__item block-train__item ">
+						perspective: 400px;
+						perspective-origin: center;
+						transform-style: flat;
+						transform: rotateY(45deg);
+					</div>
+				</div>
+				<div class="perspective-2 block-train">
+					<div class="perspective-2__item block-train__item ">
+						perspective: 400px;
+						perspective-origin: center;
+						transform-style: preserve-3d;
+						transform: rotateX(45deg);
+					</div>
+				</div>
+				<div class=" block-train">
+					<div class="translate-outside block-train__item ">
+						transform: translate(1000px, 0) scale(0.1) rotate(360deg);
+					</div>
+				</div>
+				<div class=" block-train">
+					<div class="rotate-3d block-train__item ">
+						transform: rotate3d(1, 1, 1, 360deg);
+					</div>
+				</div>
+				<div class=" block-train">
+					<div class="scale-0 block-train__item ">
+						transform: rotate3d(1, 1, 1, 360deg);
+					</div>
+				</div>
+				<!-- flip -->
+				<div class="card">
+					<div class="card__body">
+						<div class="card__front">front</div>
+						<div class="card__back">BACK</div>
+					</div>
+					<!-- flip-image -->
+				</div>
+				<div class="images">
+					<div class="images__item item-image">
+						<div class="item-image__front">
+							<img src="img/photo.webp" alt="">
+						</div>
+						<div class="item-image__back">
+							<img src="img/photo2.webp" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="footer">
+
+		</footer>
+	</div>
+
+</body>
+
+</html>
