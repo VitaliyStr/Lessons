@@ -1,0 +1,687 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+.wrapper {
+    overflow: clip;
+    min-height: 100%;
+    padding: 5px;
+    padding-bottom: 300px;
+}
+/* МАШИНА */
+/*
+	Універсальний запис
+	animation
+
+	Порядок запису властивостей:
+	animation-name
+	animation-duration
+	animation-timing-function
+	animation-iteration-count
+	animation-direction
+	animation-play-state
+	animation-delay
+	animation-fill-mode
+
+	*/
+.car {
+    margin-bottom: 200px;
+    font-size: 0;
+    position: relative;
+}
+.car__container {
+    /* background: url("../img/backgroud-road.webp") 100% / cover no-repeat; */
+    background: rgba(0, 255, 251, 0.724);
+
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border: 1px solid black;
+    perspective: 300px;
+
+    overflow: hidden;
+    animation: night 1s ease 6.5s forwards;
+}
+.car__sun {
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: yellow;
+    transform-origin: 50% 0%;
+    /* box-shadow: 5px 5px 10px rgba(225, 255, 0, 0.993),
+        -5px -5px 10px rgba(225, 255, 0, 0.993),
+        5px -5px 10px rgba(225, 255, 0, 0.993),
+        -5px 5px 10px rgba(225, 255, 0, 0.993); */
+    animation: sway 1s ease-in-out infinite alternate, sun 1s linear 7 alternate,
+        sun-2 2s ease forwards 6.5s;
+}
+.car__moon {
+    position: absolute;
+    left: 20%;
+    top: 100%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(254, 254, 254);
+    overflow: hidden;
+    font-size: 0;
+    transform-origin: 30% 0%;
+    animation: moon 2s ease forwards 7s,
+        sway 1s ease-in-out infinite alternate 9s;
+}
+.car__moon__item {
+    width: 100%;
+    height: 100%;
+    background: rgba(22, 22, 22, 0.724);
+    border-radius: 50%;
+    transform: translate(20%, -20%);
+}
+.car__road {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(37, 36, 36);
+    width: 5000px;
+    height: 300px;
+
+    transform: rotateX(60deg) translate(-20%, 0);
+}
+.road-line {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    transform: translate(0, -50%);
+}
+.car__cloud {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    background-color: rgb(1, 238, 230);
+    border-radius: 50%;
+    animation: cloud-move 20s ease normal forwards 0s;
+}
+.cloud-car__item-1 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 15%;
+    top: -20px;
+    background-color: rgb(1, 238, 230);
+    border-radius: 50%;
+}
+.cloud-car__item-2 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    background-color: rgb(1, 238, 230);
+    border-radius: 50%;
+}
+.cloud-car__item-3 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 15%;
+    bottom: -10px;
+    background-color: rgb(1, 238, 230);
+    border-radius: 50%;
+}
+.cloud-car__item-4 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    background-color: rgb(1, 238, 230);
+    border-radius: 50%;
+}
+.body-car {
+    position: absolute;
+    right: 0;
+    width: 800px;
+    bottom: 100px;
+    /* transform: scale(0.5); */
+    animation: car-scale 2s linear forwards, car-move 5s linear 2s forwards,
+        car-move-2 3s ease 11s forwards;
+}
+/* МАШИНА-ЛІВА ЧАСТИНА */
+.body-car__light {
+    position: absolute;
+    left: -190px;
+    top: 30%;
+    width: 0;
+    height: 0;
+    border-top: 100px solid transparent;
+    border-left: 200px solid rgba(225, 255, 0, 0.664);
+    border-bottom: 100px solid transparent;
+    border-radius: 10px;
+    transform: rotate(-20deg);
+    transform-origin: right;
+    visibility: hidden;
+    opacity: 0;
+    animation: car-light 1.5s ease 2 forwards 7s;
+}
+.body-car__left-side {
+    position: relative;
+}
+.side-left {
+    display: inline-block;
+    position: relative;
+}
+.side-left__top {
+    position: relative;
+    transform: translate(200px, 0);
+    width: 300px;
+    height: 130px;
+    border-radius: 84% 16% 0% 100% / 100% 0% 100% 0%;
+    border: 1px solid black;
+    background-color: hsl(246, 67%, 19%);
+}
+.side-left__window {
+    position: absolute;
+    bottom: 10%;
+    right: 25px;
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+
+    border-radius: 100% 0% 0% 100% / 100% 43% 57% 0%;
+    background: rgb(30, 214, 189);
+    background: linear-gradient(
+        74deg,
+        rgba(30, 214, 189, 1) 45%,
+        rgba(18, 114, 133, 1) 100%
+    );
+}
+.side-left__bottom {
+    position: relative;
+    width: 500px;
+    height: 150px;
+    border: 1px solid black;
+    background-color: hsl(246, 67%, 19%);
+    border-radius: 40% 0px 0px 10px;
+}
+.side-left__door {
+    position: absolute;
+    bottom: 20%;
+    right: 25px;
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+}
+.side-left__door::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 10px;
+    background-color: black;
+    border-radius: 0px 10px 0px 0px;
+}
+.side-left__wheel {
+    position: absolute;
+    left: 80px;
+    bottom: -50px;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    border-radius: 50%;
+    border: 15px solid brown;
+    animation: wheel-rotate 1s linear 5 forwards 2s,
+        wheel-rotate 1s linear 3 forwards 11s;
+}
+.side-left__wheel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 10%;
+    background-color: #f907c4;
+}
+.side-left__wheel::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: 10%;
+    height: 100%;
+    background-color: #f907c4;
+}
+/* МАШИНА-ПРАВА ЧАСТИНА */
+.side-right {
+    position: relative;
+    display: inline-block;
+}
+.side-right__top {
+    position: relative;
+    width: 200px;
+    height: 130px;
+    border-radius: 0% 100% 0% 100% / 100% 28% 72% 0%;
+    border: 1px solid black;
+    background-color: hsl(246, 67%, 19%);
+}
+.side-right__window {
+    position: absolute;
+    bottom: 10%;
+    left: 25px;
+    width: 150px;
+    height: 100px;
+    border-radius: 0% 100% 0% 100% / 100% 28% 72% 0%;
+    background: rgb(30, 214, 189);
+    background: linear-gradient(
+        74deg,
+        rgba(30, 214, 189, 1) 45%,
+        rgba(18, 114, 133, 1) 100%
+    );
+}
+.side-right__bottom {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+    background-color: hsl(246, 67%, 19%);
+    border-radius: 0px 33% 10px 0px;
+}
+.side-right-door {
+    position: absolute;
+    bottom: 20%;
+    left: 25px;
+    width: 150px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.side-right-door::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 10px;
+    background-color: black;
+    border-radius: 10px 0px 0px 0px;
+}
+.side-right-wheel {
+    position: absolute;
+    right: 20px;
+    bottom: -50px;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    border-radius: 50%;
+    border: 15px solid brown;
+    animation: wheel-rotate 1s linear 5 forwards 2s,
+        wheel-rotate 1s linear 3 forwards 11s;
+}
+.side-right-wheel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 10%;
+    background-color: #f907c4;
+}
+.side-right-wheel::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: 10%;
+    height: 100%;
+    background-color: #f907c4;
+}
+/* фари */
+
+.side-left__headlight-1 {
+    position: absolute;
+    left: 0px;
+    bottom: 58%;
+    width: 40px;
+    height: 30px;
+    background-color: #00ff40;
+    border-radius: 80% 0px 50% 0px;
+    transform: rotate(356deg);
+}
+.side-right__headlight-1 {
+    position: absolute;
+    right: 0px;
+    bottom: 35%;
+    width: 50px;
+    height: 35px;
+    background-color: #ff0000;
+    border-radius: 0% 80% 0% 50%;
+    transform: rotate(6deg);
+}
+/* НИЗ */
+.body-car__dno {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #00ddff;
+}
+/* KEYFRAMES */
+/*     box-shadow: 5px 5px 10px rgba(225, 255, 0, 0.993),
+        -5px -5px 10px rgba(225, 255, 0, 0.993),
+        5px -5px 10px rgba(225, 255, 0, 0.993),
+        -5px 5px 10px rgba(225, 255, 0, 0.993); */
+@keyframes night {
+    0% {
+    }
+    100% {
+        background: rgba(22, 22, 22, 0.724);
+    }
+}
+@keyframes sway {
+    0% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+}
+@keyframes sun {
+    0% {
+    }
+    100% {
+        box-shadow: 5px 5px 10px rgba(225, 255, 0, 0.993),
+            -5px -5px 10px rgba(225, 255, 0, 0.993),
+            5px -5px 10px rgba(225, 255, 0, 0.993),
+            -5px 5px 10px rgba(225, 255, 0, 0.993);
+    }
+}
+@keyframes moon {
+    0% {
+        left: 20%;
+        top: 100%;
+        transform: scale(0);
+    }
+    100% {
+        left: 20%;
+        top: 10%;
+        transform: scale(1);
+    }
+}
+@keyframes sun-2 {
+    0% {
+        left: 20%;
+        top: 10%;
+        transform: scale(1);
+    }
+    100% {
+        left: 20%;
+        top: 100%;
+        transform: scale(0);
+    }
+}
+@keyframes cloud-move {
+    0% {
+        transform: scale(1);
+        left: 0;
+        top: 30%;
+    }
+    10% {
+        transform: scale(0.5);
+    }
+    20% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(0.5);
+    }
+    70% {
+        transform: scale(1.5);
+    }
+    80% {
+        transform: scale(0.5);
+    }
+    90% {
+        transform: scale(1);
+    }
+    100% {
+        left: 100%;
+        top: 30%;
+        transform: scale(1);
+    }
+}
+@keyframes car-light {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@keyframes car-scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.5);
+    }
+}
+@keyframes wheel-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes wheel-rotate-2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes car-move {
+    0% {
+        transform: translate(0, 0) scale(0.5);
+    }
+    100% {
+        transform: translate(-300px, 0) scale(0.5);
+    }
+}
+@keyframes car-move-2 {
+    0% {
+        transform: translate(-300px, 0) scale(0.5);
+    }
+    100% {
+        transform: translate(-100%, 0) scale(0.5);
+    }
+}
+/* TRAINING */
+
+/*
+	Універсальний запис
+	transition
+
+	Порядок запису значень через пробіл:
+	transition-property
+	transition-duration
+	transition-timing-function
+	transition-delay
+	*/
+/* transition: all 0.5s cubic-bezier(0.39, -0.42, 0.47, 1.35) 0s; */
+
+.train {
+}
+.train-container {
+    background-color: hsla(317, 85%, 46%, 0.471);
+    padding: 5px;
+    width: 70%;
+}
+.block {
+    position: relative;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #2ac31c;
+}
+.block__item {
+    width: 200px;
+    height: 200px;
+}
+.block:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.example-1 {
+    transition: all 0.5s;
+}
+.train-container:hover .example-1 {
+    left: 50%;
+    transform: skew(-30deg) scale(0.7);
+}
+.example-2 {
+    transition: all 0.5s, background-color 0.7s 0.5s;
+}
+.train-container:hover .example-2 {
+    left: 50%;
+    transform: rotate(360deg) scale(0.5);
+    background-color: #c31cad;
+}
+.example-3 {
+    transition: all 0.5s;
+}
+.train-container:hover .example-3 {
+    left: 50%;
+    transform: rotate(360deg) scale(0.5);
+    border-radius: 50%;
+    width: 500px;
+}
+.example-4 {
+    transition: all 0.5s 0.3s, transform 0.3s ease;
+    transform-origin: 0 0;
+}
+
+.example-4__item {
+    transform-origin: 0 0;
+    background-color: #2ac31c;
+}
+.train-container:hover .example-4 {
+    left: 50%;
+    transform: rotate(45deg);
+    transition: all 0.5s, transform 0.3s ease 0.5s;
+}
+
+.example-5 {
+    transition: all 0.2s;
+}
+.example-5:hover .example-5__item {
+    transform: rotate(360deg) scale(0);
+}
+.example-5__item {
+    transition: all 0.2s;
+    background-color: yellow;
+    transform: rotate(0) scale(1);
+}
+/* СПИСОК */
+.example-list {
+    background-color: #00ff40;
+    max-width: 400px;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.example-list__item {
+    transform: translate(100%, 0);
+    transition: all 0.2s;
+    /* transition-duration: 0.2s; */
+}
+.example-list:hover .example-list__item {
+    transform: translate(0, 0);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+.example-list__item:nth-child(1) {
+    transition-delay: 0s;
+}
+.example-list__item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.example-list__item:nth-child(3) {
+    transition-delay: 0.4s;
+}
+.example-list__item:nth-child(4) {
+    transition-delay: 0.6s;
+}
+/* ПОСИЛАННЯ */
+.example__link {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.489);
+    color: rgb(195, 195, 195);
+    transition: all 0.3s ease;
+}
+.example__link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    margin-top: 2px;
+    transition: all 0.3s;
+}
+.example__link:hover::after {
+    width: 100%;
+}
+.example__link:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+.example__link-2 {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.489);
+    color: rgb(195, 195, 195);
+    transition: all 0.3s ease;
+}
+.example__link-2::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    margin-top: 2px;
+    transition: all 0.3s;
+    position: relative;
+    left: 50%;
+}
+.example__link-2:hover::after {
+    width: 100%;
+    left: 0;
+}
+.example__link-2:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
