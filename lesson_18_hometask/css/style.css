@@ -1,0 +1,554 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+    font-family: "Inter";
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+
+[class*="__container"] {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/* header */
+/* фіксуємо header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 50;
+}
+.header__container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    min-height: 100px;
+    /* падінги безпеки */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.header__logo {
+    color: #000;
+    font-family: "Merriweather";
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 700;
+    flex-shrink: 0;
+    /* під час создавання бургер меняю дістаємо наверх логотип  position: relative; z-index: 5;*/
+    position: relative;
+    z-index: 5;
+}
+.menu {
+    flex: 1 1 auto;
+}
+.menu__body {
+}
+.menu__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 36px;
+    /* додавати наперед для того щоб не було поломки коли буде більше обьектів і складалися обьекти в 2 рядки з відступом між ними */
+    row-gap: 3px;
+    flex-wrap: wrap;
+}
+.menu__item {
+}
+.menu__item--active .menu__link {
+    font-weight: 700;
+    color: #d58417;
+    text-decoration-line: underline;
+}
+.menu__link {
+    color: #000;
+    font-family: " Merriweather";
+    font-size: 20px;
+    transition: color 0.3s;
+}
+/* hover .menu__item:hover .menu__link, щоб зберігався хавер на   .menu__link( і було підкреслене ) при відкритому sub-menu */
+@media (any-hover: hover) {
+    .menu__item:hover .menu__link {
+        color: #d58417;
+        font-size: 20px;
+        text-decoration-line: underline;
+        /* font-weight: 700; */
+    }
+}
+.menu__item--parent {
+    position: relative;
+}
+.menu__item--parent .menu__link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.menu__item--parent .menu__link::after {
+    content: "";
+    background: url("../img/header/arrow-bot.png") 0 0 no-repeat;
+    flex: 0 0 16px;
+    height: 8px;
+    width: 16px;
+    transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+    .menu__item--parent:hover .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px, 0px);
+        /* При ховері є взаємодія з курсором */
+        pointer-events: all;
+    }
+}
+@media (any-hover: hover) {
+    .menu__item--parent:hover .menu__link::after {
+        transform: rotate(-180deg);
+    }
+}
+
+.sub-menu {
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0px, 10%);
+    /* Властивість відміняє взяємодію з курсором */
+    pointer-events: none;
+}
+.sub-menu__list {
+    width: 200px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #502203;
+}
+.sub-menu__item {
+}
+.sub-menu__item:not(:last-child) {
+    margin-bottom: 5px;
+}
+.sub-menu__link {
+    color: #ffffff;
+    font-size: 18px;
+}
+@media (any-hover: hover) {
+    .sub-menu__link:hover {
+        text-decoration: underline;
+    }
+}
+
+.header__actions {
+    flex-shrink: 0;
+}
+.actions-header {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    /* під час создавання бургер меняю дістаємо наверх логотип  position: relative; z-index: 5;*/
+    position: relative;
+    z-index: 5;
+}
+.actions-header__link {
+    position: relative;
+    flex: 0 0 32px;
+    transition: all 0.3s;
+}
+.actions-header__link img {
+    max-width: 100%;
+}
+.actions-header__link span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #ff3333;
+    color: #ffffff;
+    font-size: 9px;
+    text-align: center;
+    /*  line-height: 12px; такий самий як і висота спана для відцентровки */
+    line-height: 12px;
+}
+.icon-menu {
+    display: none;
+}
+@media (any-hover: hover) {
+    .actions-header__link:hover {
+        transform: scale(1.1);
+    }
+}
+/* АДАПТИВ 960 */
+@media (max-width: 960px) {
+    .menu__body {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        background-color: rgba(147, 71, 20, 1);
+        padding: 70px 15px 30px 15px;
+        /* якщо багато пунктів або маленький екран додаємо щоб ми змогли дістатися до всих пунктів меню */
+        overflow: auto;
+        transition: left 0.3s;
+    }
+    /* запобіжник щоб підпункти меню не насувалися на шапку */
+    .menu__body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 50px;
+        z-index: 2;
+        background-color: rgba(147, 71, 20, 1);
+        transition: left 0.3s;
+    }
+    .menu-open .menu__body,
+    .menu-open .menu__body::before {
+        left: 0;
+    }
+    .menu__list {
+        flex-direction: column;
+        text-align: right;
+        /* збільшуємо row gap щоб попадати в окремі пункти */
+        row-gap: 20px;
+    }
+    /* На мобільних пристроях якщо дозволяє вміст контенту розмір header потрібно робити якомога меншу, щоб воно не заважало */
+    .header__container {
+        min-height: 50px;
+    }
+    /* зменшуємо розмір логотипу */
+    .header__logo {
+        font-size: 24px;
+    }
+    /* збільшуємо розмір меню для удобства, але прийнято взагалі шрифт зменшувати */
+    .menu__link {
+        font-size: 28px;
+    }
+    /* Якщо відкриті пункти сабменю то прибираємо стрілочку */
+    .menu__item--parent .menu__link {
+        display: block;
+    }
+    .menu__item--parent .menu__link::after {
+        display: none;
+    }
+    /* в таких випадках краще відобразити сабменю */
+    .sub-menu {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    .sub-menu__list {
+        width: 100%;
+    }
+    .sub-menu__item:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    .sub-menu__link {
+        color: #ffffff;
+        font-size: 24px;
+    }
+    .icon-menu {
+        width: 30px;
+        display: block;
+        flex: 0 0 30px;
+        height: 18px;
+        position: relative;
+        z-index: 5;
+    }
+    .icon-menu::before,
+    .icon-menu::after,
+    .icon-menu span {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        background-color: #000;
+        transition: all 0.3s ease 0s;
+    }
+    .icon-menu::before {
+        top: 0;
+    }
+    .icon-menu::after {
+        bottom: 0;
+    }
+    .icon-menu span {
+        top: 50%;
+        margin-top: -1px;
+    }
+    .menu-open .icon-menu span {
+        transform: scale(0);
+    }
+    .menu-open .icon-menu::before {
+        transform: rotate(-45deg);
+        top: 50%;
+        margin-top: -1px;
+    }
+    .menu-open .icon-menu::after {
+        transform: rotate(45deg);
+        bottom: 50%;
+        margin-bottom: -1px;
+    }
+}
+/* АДАПТИВ 440 */
+@media (max-width: 440px) {
+    .header__container {
+        gap: 5px;
+    }
+    .actions-header {
+        gap: 10px;
+    }
+}
+/* PAGE */
+/* HERO */
+.page {
+    display: flex;
+    flex-direction: column;
+}
+.page__container {
+}
+.page__hero {
+}
+.hero {
+    background: #502203;
+    padding: 200px 0px 55px 0px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.hero__container {
+    position: relative;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.hero__body {
+}
+/* mibile first */
+
+.hero__title {
+    color: #fff;
+    font-family: " Cormorant Infant";
+    font-size: 78px;
+    font-weight: 700;
+    line-height: 129%;
+}
+.hero__button {
+    color: #fff;
+    font-family: "Cormorant Infant";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    padding: 15px 25px;
+    position: relative;
+}
+.hero__button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 12px;
+    left: -8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+    .hero__button:hover::before {
+        top: 0;
+        left: 0;
+    }
+}
+.hero__image {
+    border-radius: 215px;
+    flex-shrink: 0;
+    /* border: 1px solid #fff;
+    padding: 20px; */
+    /* 430/1170 */
+    flex-basis: 36.75%;
+}
+.hero__image img {
+    width: 100%;
+    /* border-radius: 215px; */
+}
+.hero__content {
+    /* ширина (100%-36.75%)/2=31.625% */
+    /* 100% - ширина контейнера
+	36.75 - ширина картинки
+	2- тому що ще є 2 блока */
+}
+
+.content-hero {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 20px;
+}
+.content-hero__text {
+    color: #fff;
+    font-family: "Cormorant Infant";
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 148%;
+    flex-grow: 1;
+}
+.content-hero__item {
+    color: #fff;
+    font-family: "Cormorant Infant";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+    position: relative;
+    padding-left: 10px;
+    margin-right: -20px;
+}
+.content-hero__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0px, -50%);
+    height: 78.94%;
+    width: 1px;
+    background-color: #fff;
+}
+
+/* image декор */
+.hero__image {
+}
+.hero__image--left {
+    padding: 5px 0px 0px 6px;
+    border-radius: 195px 195px 0px 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-70%, 27%);
+    flex-shrink: 0;
+    max-width: 20.5%;
+}
+.hero__image--left img {
+    margin: 0px -6px -5px 0px;
+    border-radius: 195px 195px 0px 0px;
+    width: 100%;
+}
+.hero__image--right {
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(120%, 0px);
+    border-radius: 215px 0 0 215px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 12px 0px 12px 12px;
+    /* border-radius: 195px 0 0 195px; */
+    /* border: none;
+    */
+
+    max-width: 20%;
+}
+.hero__image--right img {
+    /* border-radius: 0px; */
+    border-radius: 215px 0 0 215px;
+    width: 100%;
+}
+@media (max-width: 1600px) {
+    .hero__image--left {
+        display: none;
+    }
+    .hero__image--right {
+        display: none;
+    }
+}
+@media (max-width: 1220px) {
+    .content-hero__item {
+        margin-right: 0px;
+    }
+}
+@media (max-width: 1200px) {
+    .hero__title {
+        font-size: 64px;
+    }
+}
+@media (max-width: 991.98px) {
+    .hero {
+        padding: 150px 0px 40px 0px;
+    }
+    .hero__container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: stretch;
+    }
+    .hero__body {
+        text-align: center;
+    }
+    .hero__image {
+        align-self: center;
+    }
+}
+@media (max-width: 960px) {
+    .hero {
+        /* 50px шапка + 40px =відступзверху */
+        padding: 90px 0px 40px 0px;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .content-hero__item {
+        align-self: flex-end;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .hero__body {
+        padding-top: 57px;
+        padding-right: 30px;
+        flex-basis: 31.625%;
+        flex-shrink: 0;
+    }
+    .hero__content {
+        padding-top: 76px;
+        padding-left: 23px;
+        flex-basis: 31.625%;
+        flex-shrink: 0;
+    }
+    .content-hero__item {
+        margin-bottom: 183px;
+    }
+}
+.footer {
+    text-align: center;
+    padding-bottom: 50px;
+}
+.footer a {
+    padding: 20px;
+    background-color: #40ff00;
+    text-align: center;
+    border-radius: 20px;
+}
