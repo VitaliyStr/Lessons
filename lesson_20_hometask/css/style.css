@@ -1,0 +1,390 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Text:regular&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Infant:700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  color: inherit;
+  background-color: transparent;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Підключення вручну */
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Regular.woff2") format("woff2"), url("../fonts/Causten-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Medium.woff2") format("woff2"), url("../fonts/Causten-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Semi-Bold.woff2") format("woff2"), url("../fonts/Causten-Semi-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Bold.woff2") format("woff2"), url("../fonts/Causten-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Core Sans C */
+@font-face {
+  font-family: "Core Sans C";
+  src: url("../fonts/CoreSansC-45Regular.woff2") format("woff2"), url("../fonts/CoreSansC-45Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Core Sans C";
+  src: url("../fonts/CoreSansC-55Medium.woff2") format("woff2"), url("../fonts/CoreSansC-55Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Core Sans C";
+  src: url("../fonts/CoreSansC-65Bold.woff2") format("woff2"), url("../fonts/CoreSansC-65Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Core Sans C";
+  src: url("../fonts/CoreSansC-75ExtraBold.woff2") format("woff2"), url("../fonts/CoreSansC-75ExtraBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Core Sans C";
+  src: url("../fonts/CoreSansC-85Heavy.woff2") format("woff2"), url("../fonts/CoreSansC-85Heavy.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  color: #333;
+}
+
+.wrapper {
+  overflow: clip;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.wrapper main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+[class*=__container] {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.train span {
+  color: green;
+}
+
+.text {
+  color: red;
+  font-size: 20px;
+}
+
+.text.main-text {
+  color: green;
+  font-size: 30px;
+}
+.footer .text {
+  color: rgba(43, 110, 218, 0.726);
+  font-size: 25px;
+}
+
+.block {
+  /* .block__container */
+  /* .block__title */
+  /* .block__body */
+  /* .block__text */
+}
+.block__container {
+  padding: 0 15px;
+}
+.block__title {
+  position: relative;
+  padding-left: 10px;
+}
+.block__title::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #43f611;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.block__title:hover {
+  background-color: #ff8d8d;
+}
+.block__title:hover::before {
+  opacity: 0;
+}
+.block__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 900px) {
+  .block__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.block .block {
+  /* .block__image */
+}
+.block .block__image {
+  /* .block__image--big */
+}
+/* Hometask */
+.popular-products {
+  /* .popular-products__container */
+  /* .popular-products__title */
+  /* .popular-products__sub-title */
+}
+.popular-products__title {
+  color: #0e333d;
+  font-family: "DM Serif Text";
+  font-size: 48px;
+  line-height: 1.27;
+  text-align: center;
+}
+.popular-products__title:not(:last-child) {
+  margin-bottom: 29px;
+}
+@media (max-width: 600px) {
+  .popular-products__title:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.popular-products__sub-title {
+  color: #8c8b8a;
+  font-family: "Raleway";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.27;
+  text-align: center;
+}
+.popular-products__sub-title:not(:last-child) {
+  margin-bottom: 128px;
+}
+@media (max-width: 991.98px) {
+  .popular-products__sub-title:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+.popular-products .popular-products {
+  /* .popular-products__items */
+}
+.popular-products .items-popular-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 47px;
+  grid-auto-rows: 1fr;
+}
+.popular-products .items-popular-products > :nth-child(5n+1) {
+  grid-row: span 2;
+}
+@media (min-width: 1170px) {
+  .popular-products .items-popular-products {
+    grid-template-columns: 400px 1fr 1fr;
+  }
+}
+.popular-products .items-popular-products__image {
+  height: 100%;
+}
+.popular-products .items-popular-products__image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 400/730;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 600px) {
+  .popular-products .items-popular-products__image {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .popular-products .items-popular-products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.popular-products .items-popular-products {
+  /* .items-popular-products__item */
+}
+.popular-products .item-popular-products {
+  /* .item-popular-products__link-image */
+  /* .item-popular-products__body */
+  /* .item-popular-products__title */
+  /* .item-popular-products__price */
+}
+@media (any-hover: hover) {
+  .popular-products .item-popular-products:hover .item-popular-products__link-image::before {
+    visibility: visible;
+    opacity: 0.2;
+  }
+}
+@media (max-width: 991.98px) {
+  .popular-products .item-popular-products {
+    grid-column: 2/span 2;
+  }
+}
+@media (max-width: 600px) {
+  .popular-products .item-popular-products {
+    grid-column: 1/span 1;
+  }
+}
+.popular-products .item-popular-products__link-image {
+  position: relative;
+  width: 100%;
+}
+.popular-products .item-popular-products__link-image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 370/278;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.popular-products .item-popular-products__link-image:not(:last-child) {
+  margin-bottom: 18px;
+}
+.popular-products .item-popular-products__link-image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (max-width: 600px) {
+  .popular-products .item-popular-products__body {
+    text-align: center;
+  }
+}
+.popular-products .item-popular-products__title:not(:last-child) {
+  margin-bottom: 4px;
+}
+@media (any-hover: hover) {
+  .popular-products .item-popular-products__title:hover {
+    text-decoration: underline;
+  }
+}
+.popular-products .item-popular-products__title, .popular-products .item-popular-products__price {
+  color: #000;
+  font-family: "Cormorant Infant";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .popular-products .item-popular-products__title, .popular-products .item-popular-products__price {
+    font-size: 30px;
+  }
+}
+.popular-products .item-popular-products__price:not(:last-child) {
+  margin-bottom: 4px;
+}
