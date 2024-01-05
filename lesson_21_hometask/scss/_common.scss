@@ -1,0 +1,57 @@
+@mixin image($aspect: 1 #{"/"} 1, $obFit: cover, $width: 100%, $height: 100%) {
+    aspect-ratio: $aspect;
+    object-fit: $obFit;
+    width: $width;
+    height: $height;
+}
+@mixin imageBg(
+    $position: absolute,
+    $width: 100%,
+    $height: 100%,
+    $left: 0,
+    $top: 0
+) {
+    position: $position;
+    width: $width;
+    height: $height;
+    left: $left;
+    top: $top;
+    img {
+        @include image;
+    }
+}
+@mixin button(
+    $br: 8px,
+    $padding: 16px 72px,
+    $color: #3c4242,
+    $ff: "Causten",
+    $fs: 24px,
+    $fw: 700
+) {
+    border-radius: $br;
+    padding: $padding;
+    color: $color;
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+%title {
+    position: relative;
+    padding-left: 26px;
+    color: #3c4242;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 98.529%;
+    letter-spacing: 0.68px;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 6px;
+        height: 100%;
+        border-radius: 10px;
+        background: #8a33fd;
+    }
+}
