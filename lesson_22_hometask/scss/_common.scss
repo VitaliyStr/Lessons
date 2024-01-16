@@ -1,0 +1,86 @@
+@use "sass:math";
+
+// Шрифти
+@import "_fonts.scss";
+// Обнулення
+@import "_reset.scss";
+// Компоненти
+
+// Функції
+@import "_functions.scss";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 800px;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$mainColor: #37393f;
+$secondColor: #fff;
+// button
+
+.button {
+    color: $secondColor;
+    padding: toRem(22) toRem(35);
+    background-color: #6b77e5;
+    color: $secondColor;
+    font-family: "Cabin";
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.button {
+    @media (any-hover: hover) {
+        &:hover {
+            a {
+                background-color: #1127ea;
+            }
+        }
+    }
+    @media (max-width: toEm(450)) {
+        display: none;
+    }
+    a {
+        font-size: toRem(22);
+        color: $secondColor;
+        padding: toEm(22) toEm(35);
+        background-color: #6b77e5;
+        color: $secondColor;
+        font-family: "Cabin";
+        font-weight: 600;
+        text-transform: capitalize;
+        // @media (max-width: toEm(991.98)) {
+        //     padding: toEm(6) toEm(10);
+        //      @include adaptiveValue("font-size", 22, 16, 1, 991.8, 450);
+        // }
+        // @media (max-width: toEm(540)) {
+        // }
+    }
+}
+.sub-title {
+    display: flex;
+    align-items: center;
+    gap: toRem(7);
+    position: relative;
+
+    color: $heroColorTitle;
+    font-weight: 600;
+    line-height: 1.46;
+    &::before {
+        content: "";
+
+        width: toRem(11);
+        height: toRem(11);
+        flex: 0 0 toRem(11);
+        background: #40ddb6;
+    }
+    &:not(:last-child) {
+        margin-bottom: toRem(10);
+    }
+}
